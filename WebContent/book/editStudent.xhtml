@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<title>学生信息编辑</title>
+</h:head>
+		<!-- 本部分用来进行学生信息的编辑，将页面中的控件与托管bean
+			“student.aStudent”的属性相关联，按钮的action与托管bean
+			“student”的UpdateStudent方法相关联 -->
+<h:body>
+<h2><div align="center">当前图书信息</div></h2>
+<h:form> 
+	<div align="center">       
+	ISBN：<h:inputText id="isbn" value="#{bookBean.aBook.isbn}"/><br/>
+	作者：<h:inputText id="author" value="#{bookBean.aBook.author}"/><br/>
+	出版社：<h:inputText id="pub" value="#{bookBean.aBook.pub}"/><br/>
+	价格：<h:inputText id="price" value="#{bookBean.aBook.price}"/><br/>
+	类型：<h:inputText id="type" value="#{bookBean.aBook.type}"/><br/>
+	<h:commandButton id="submit" value="提交" action="#{bookBean.UpdateBook}" />
+	</div>
+</h:form>
+</h:body>
+</html>

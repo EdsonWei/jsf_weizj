@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      >
+<h:head>
+<title>用户管理员</title>
+</h:head>
+<h:body>
+<h:form>
+ 	<h3>Please enter your name and password.</h3>
+ 			<table>
+ 				<tr>
+ 					<td>Name:</td>
+ 					<td><h:inputText value="#{adminBean.name}" /></td>
+ 				</tr>
+	 			<tr>
+					<td>Password:</td>
+ 					<td><h:inputSecret id ="pwdadmin" value="#{adminBean.pwd}" /></td><div style="color:red"><h:message id="message" for="pwdadmin"/></div>
+ 				</tr>
+ 			</table>
+ 			
+ 	<p><h:commandButton value="Login" action="#{adminBean.VerifyPasswordbook()}"/></p>
+</h:form>
+ 	</h:body>
+ </html>

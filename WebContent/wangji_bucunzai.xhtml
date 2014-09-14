@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Default Header</title>
+</head>
+<!-- 页面布局中中部右侧middle_right部分的实现  -->
+<body>
+	<ui:composition>
+	<!-- action动作行为需要包括在form中  -->
+	<h:form>
+		<font color="red">该用户不存在</font>
+		<!-- 本部分用来构造查询界面，将页面中的输入控件与托管bean
+			“student”的属性相关联，按钮的action与托管bean
+			“student”的AddStudent方法相关联 -->
+		<h:panelGrid columns="4">
+ 	    	<h:outputText value="用户名："/> <h:inputText id="nmae" value="#{userBean.name}"/>
+ 	    	<h:outputText value="家乡："/>	<h:inputText id="home" value="#{userBean.home}"/>
+ 	    	<h:outputText value="学校："/>	<h:inputText id="school" value="#{userBean.school}"/>
+ 	    	<h:outputText value="身份证号："/><h:inputText id="id" value="#{userBean.id}"/>
+ 	    	<h:outputText value="新密码："/> <h:inputText id="pwd" value="#{userBean.pwd}"/>
+ 	    	<h:outputText value="重复密码："/> <h:inputText id="pwda" value="#{userBean.pwda}"/>
+		</h:panelGrid>
+		<h:commandButton value="注册" action="#{userBean.gaiUser}" />
+		<h3>          </h3>
+     <h:commandLink  id="wangji" value="  返回首页" action="login" > </h:commandLink>
+	</h:form> 
+	</ui:composition>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      >
+<h:head>
+<title>Login</title>
+</h:head>
+<h:body>
+<h:form>
+ 	
+ 	
+ 	 <h:commandLink  id="zhuche" value="浏览书城" action="/mai/student" >
+     </h:commandLink><h3>          </h3>
+     <h:commandLink  id="wangji" value="  我的购物车" action="/car/content" > </h:commandLink>
+      <h3>          </h3>
+     <h:commandLink  id="wangjsi" value="  我的订单" action="/order/content" > </h:commandLink>
+      <h3>          </h3>
+     <h:commandLink  id="tuichu" value="  退出" action="#{userBean.tui()}" > </h:commandLink>
+</h:form>
+<table>
+ 				<tr>
+ 					<td>历史访问人数:</td>
+ 					<td><h:outputText value="#{userBean.zhong}" /></td>
+ 				</tr>
+	 			<tr>
+					<td>当前在线人数:</td>
+ 					<td><h:outputText id ="pwd" value="#{userBean.cu}" /></td>
+ 				</tr>
+ 			</table>
+ 	</h:body>
+ </html>

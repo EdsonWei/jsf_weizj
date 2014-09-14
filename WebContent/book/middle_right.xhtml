@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Default Header</title>
+</head>
+<!-- 页面布局中中部右侧middle_right部分的实现  -->
+<body>
+	<ui:composition>
+	<!-- action动作行为需要包括在form中  -->
+	<h:form>
+		添加操作：
+		<!-- 本部分用来构造查询界面，将页面中的输入控件与托管bean
+			“student”的属性相关联，按钮的action与托管bean
+			“student”的AddStudent方法相关联 -->
+		<h:panelGrid columns="4">
+ 	    	<h:outputText value="ISBN："/> <h:inputText id="isbn" value="#{bookBean.isbn}"/>
+ 	    	<h:outputText value="作者："/> <h:inputText id="author" value="#{bookBean.author}"/>
+ 	    	<h:outputText value="出版社："/>	<h:inputText id="pub" value="#{bookBean.pub}"/>
+ 	    	<h:outputText value="价格："/>	<h:inputText id="price" value="#{bookBean.price}"/>
+ 	    	<h:outputText value="类型："/><h:inputText id="type" value="#{bookBean.type}"/>
+		</h:panelGrid>
+		<h:commandButton value="添加" action="#{bookBean.AddBook}" />
+	</h:form> 
+	</ui:composition>
+</body>
+</html>
